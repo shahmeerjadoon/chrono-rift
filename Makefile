@@ -1,22 +1,20 @@
-CXX      = g++
-CXXFLAGS = -Wall -Wextra -std=c++17 -pthread
-
-# Using ncurses (recommended for Docker)
-LIBS = -lncurses -lrt
+CC      = gcc
+CFLAGS  = -Wall -Wextra -g -Iinclude
+LDFLAGS = -lpthread -lrt -lncurses
 
 TARGETS = arbiter_exec hip_exec asp_exec
 
 all: $(TARGETS)
-	@echo Build complete.
+	@echo "Build complete."
 
-arbiter_exec: arbiter/arbiter.cpp
-	$(CXX) $(CXXFLAGS) arbiter/*.cpp -o $@ $(LIBS)
+arbiter_exec: arbiter/arbiter.c
+	$(CC) $(CFLAGS) arbiter/arbiter.c -o $@ $(LDFLAGS)
 
-hip_exec: hip/hip.cpp
-	$(CXX) $(CXXFLAGS) hip/*.cpp -o $@ $(LIBS)
+hip_exec: hip/hip.c
+	$(CC) $(CFLAGS) hip/hip.c -o $@ $(LDFLAGS)
 
-asp_exec: asp/asp.cpp
-	$(CXX) $(CXXFLAGS) asp/*.cpp -o $@ $(LIBS)
+asp_exec: asp/asp.c
+	$(CC) $(CFLAGS) asp/asp.c -o $@ $(LDFLAGS)
 
 clean:
 	rm -f $(TARGETS)
