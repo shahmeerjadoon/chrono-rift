@@ -6,7 +6,6 @@ int main() {
     cbreak();
     noecho();
     
-    // Print directly to main screen (no window)
     mvprintw(0, 0, "=== CHRONO RIFT TEST ===");
     mvprintw(2, 0, "Health:  [##########] 100%%");
     mvprintw(3, 0, "Stamina: [######----] 60%%");
@@ -15,7 +14,6 @@ int main() {
     
     refresh();
     
-    // Wait for q
     timeout(-1);
     while(getch() != 'q') {}
     

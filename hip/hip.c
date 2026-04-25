@@ -1,5 +1,6 @@
-#include <iostream>
+#include <stdio.h>
+
 int main() {
-    std::cout << "HIP process started\n";
+    printf("HIP process started\n");
     return 0;
 }
