@@ -1,0 +1,51 @@
+:root {
+    /* Primary Colors */
+    --black: #000000;
+    --white: #ffffff;
+    --gray: #888888;
+    --red: #b55656;
+    --green: #69c290;
+    --blue: #4579BB;
+    --yellow: #dbc740;
+
+    /* Background Colors */
+    --bg-content: #e0e0e0;
+    --bg-error: #cb0000;
+    --bg-highlight: var(--yellow);
+    --bg-main: #cecece;
+    --bg-row-even: #c8c8c8;
+    --bg-row-odd: #b6b6b6;
+    --bg-spoiler: var(--white);
+    --bg-success: #008800;
+
+    /* Text Colors */
+    --text-alt: #323232;
+    --text-button: var(--white);
+    --text-error: #ff0000;
+    --text-form: var(--white);
+    --text-icon-flag: #f3d03b;
+    --text-link: #004cab;
+    --text-main: var(--black);
+    --text-message: var(--white);
+    --text-placeholder: var(--white);
+
+    /* Border Colors */
+    --border-icon: #e8e8e8;
+    --border-icon-frame: #a2a2a2;
+    --border-icon-shadow: #6d6d6d;
+
+    /* Network Colors */
+    --vgr: #2092b4;
+    --tsr: #b4202a;
+    --tmr: #205bb4;
+    --tsor: #5da05d;
+    --ttr: #a320b4;
+    --tools: #282828;
+    --vgfacts: #b42020;
+
+    /* Social Colors */
+    --bluesky: #0085ff;
+    --discord: #7289da;
+    --twitch: #6441a5;
+    --youtube: #ce0f0f;
+}

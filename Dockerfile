@@ -9,7 +9,7 @@ RUN sed -i 's/archive.ubuntu.com/mirror.arizona.edu/g' /etc/apt/sources.list && 
 # Install packages in smaller groups to see progress
 RUN apt-get install -y build-essential cmake gdb
 
-RUN apt-get install -y libsfml-dev
+RUN apt-get install -y libsfml-dev fonts-dejavu-core
 
 RUN apt-get install -y libsdl2-dev libglfw3-dev
 

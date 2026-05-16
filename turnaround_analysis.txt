@@ -1,0 +1,25 @@
+Chrono Rift turnaround analysis
+Timer: std::chrono::steady_clock
+Roll 643  party 3  concurrentCap 6
+
+Player E2E: from sem_post(toPlayer) through sem_wait(humanReady) and processPlayerAction.
+  Includes human think time and HIP thread scheduling.
+Player arbiter: time inside processPlayerAction only (rule application on shared state).
+
+NPC E2E: from sem_post(toNpc) through sem_timedwait(aiReady) and processEnemyAction if any.
+NPC arbiter: time inside processEnemyAction only.
+Timeout turns still count as one NPC E2E sample (wait ends near npcTurnTimeoutSeconds).
+
+METRIC                              COUNT     MIN_ms     AVG_ms     MAX_ms
+---------------------------------------- -------- ---------- ---------- ----------
+Player turn end-to-end                  1    313.209    313.209    313.209
+Player arbiter apply                    1      0.002      0.002      0.002
+NPC turn end-to-end                     0        n/a        n/a        n/a
+NPC arbiter apply                       0        n/a        n/a        n/a
+
+Notes for the report
+Player end-to-end time includes waiting for you to pick an action in HIP.
+Player arbiter apply is only the rule update after your action arrives.
+NPC end-to-end time includes ASP thread wake-up and sem post back to the arbiter.
+If NPC MIN_ms is near 3000, some turns hit the timeout path.
+Disable this output with CHRONO_TA_ANALYSIS=0.

@@ -1,0 +1,24 @@
+:root {
+    /* Background Colors */
+    --bg-header: #b4202a;
+    --bg-footer: #650d1b;
+    --bg-sidebar: #d56868;
+    --bg-form: #e48585;
+    --bg-icon-header: #a34d4d;
+    --bg-icon-base: var(--bg-sidebar);
+    --bg-icon-body: linear-gradient(180deg, #db7c7c 5%, transparent 100%), linear-gradient(360deg, #ae5757 0%, transparent 50%), linear-gradient(#db7d7c 2px, transparent 2px), linear-gradient(to right, #db7d7c 2px, transparent 2px), linear-gradient(180deg, #db7c7c 0%, #bb6767 100%);
+
+    /* Border Colors */
+    --border-highlight: 220, 140, 140;
+    --border-shadow: 91, 20, 20;
+
+    /* Multi-Use Colors */
+    --light: #f0a2a2;
+
+    /* Icon Background Pattern */
+    --icon-bg-size: 100% 100%, 100% 100%, 10px 10px, 12px 12px, 100% 100%;
+    --icon-bg-position: 3px 0px;
+
+    /* Site-Specific Images */
+    --logo: url('/images/logos/sprites.png');
+}

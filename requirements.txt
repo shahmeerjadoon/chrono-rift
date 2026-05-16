@@ -1,0 +1,2 @@
+# extra apt lines (optional). base image already installs build-essential, ncurses, etc.
+# libncurses-dev
