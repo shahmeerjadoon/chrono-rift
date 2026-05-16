@@ -12,19 +12,7 @@ Technical Report: Process Architecture, Scheduling, and IPC
 
 The repository contains the full source tree, a Makefile, a Dockerfile, and a `requirements.txt`. Run `make` from the project root to build. This produces three binaries: `arbiter_exec`, `hip_exec`, and `asp_exec`. Run `./arbiter_exec` to start the game. It spawns the other two processes on its own.
 
-The zip file follows the course naming rule: `BCS Section_RollNumber_FullName`.
-
 ---
-
-## Screenshots
-
-> **How to add screenshots:**
-> 1. Place your image files in the repo (e.g. a `screenshots/` folder).
-> 2. Reference them in Markdown like this:
->    ```markdown
->    ![Caption](screenshots/your-image.png)
->    ```
-> 3. On GitHub, you can also drag-and-drop images directly into the README editor — it auto-uploads and inserts the link.
 
 ### Gameplay
 
